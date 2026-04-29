@@ -1,0 +1,132 @@
+Configurar Git
+
+git config --global user.name "Nicolas Valencia"
+git config --global user.email "nicovalebla@gmail.com"
+git config --list
+
+Crear Repositorio se debe estar en la ruta del proyecto
+
+FNC_GRITHER@DESKTOP-OIEL6JF /cygdrive/c/Users/FNC_GRITHER/desktop/FNIX/GIT/MiProyectoWeb
+$ git init
+
+Clonar proyecto
+
+FNC_GRITHER@DESKTOP-OIEL6JF /cygdrive/c/Users/FNC_GRITHER/desktop/FNIX/GIT
+$ git clone ./MiProyectoWeb/ proyectoClonado
+
+Añadir archivos al commit
+
+$ git add . = añade todo
+$ git add pagina1.html = añade uno por uno
+
+Borrar archivos añadidos al commit add
+
+$ git rm --cached pagina1.html
+
+Restaurar cambios de archivos modificados
+
+$ git restore pagina1.html
+
+Visualizamos que cambios hubo con respecto al archivo que se añadió al commit add
+
+$ git diff pagina1.html
+
+Verificar status
+
+$ git status
+
+Ignora los archivos especificados
+
+$ touch .gitignore
+
+$ nano .gitignore
+
+realizar un commit
+
+$ git commit -m "Contiene Todos los archivos iniciales"
+
+$ git log --oneline
+
+subir archivos sin ADD directamente commit
+
+$ git commit -am "Cambios en los textos de la pagina"
+
+revisar cambios de unb commit a otro 
+
+$ git diff 060a673 29c158e
+
+reversar archivos subidos al commit
+
+$ git reset HEAD index.html
+
+$ git reset .
+
+deshacer cambios archivos
+
+$ git checkout index.html
+
+resetear commit 
+
+$ git reset HEAD~1
+
+deshacer un commit , (0 es la poscion inicial)
+
+$ git reset --hard HEAD~1
+
+$ git reset --hard 9270369(commit)
+
+Regresar a un commit sin perder cambios 
+
+$ git checkout 18d4239(id commit)
+
+Crear nueva rama
+
+$ git branch "Contacto" 3e5aa64(ID commit)
+
+muestra las ramas creadas 
+
+$ git branch
+
+Buscar commit por nombre coincidente
+
+$ git log --grep=cambios(palabra)
+
+sirve para buscar commit por linea de código en archivos
+
+$ git log -S 'Pagina web html'
+
+Eliminar rama
+
+$ git branch -D Contacto
+
+Fusionar ramas
+
+$ git merge Contacto(nombre Branch)
+
+Guardar cambios para cambiar de rama sin conflictos(si hay cambios pendientes)
+
+$ git stash
+
+$ git stash show (muestra los cambios almacenados)
+
+$ git stash pop(regresa el fichero listo para relizar commit)
+
+$ git stash clear (Limpia los archivos almacenados en el stash)
+
+Crear repositorio y conectar remotamente
+
+$ echo "# dsadsa" >> README.md
+$ git init
+$ git add README.md
+$ git commit -m "first commit"
+$ git branch -M main
+$ git remote add origin https://github.com/GRITHERLAN/dsadsa.git
+$ git push -u origin main
+
+Baja ramas en remoto
+
+$ git fetch --all
+
+baja los cambios que se hicieron en el Branch remoto
+
+$ git pull origin(remoto) Usuarios(rama donde bajaran los cambios)
