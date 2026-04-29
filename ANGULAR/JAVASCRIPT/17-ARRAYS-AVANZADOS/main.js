@@ -102,3 +102,29 @@ tabla.forEach((fila, index) => {
   document.write('</tr>');
 });
 document.write('</table>');
+
+/* Arrays tridimensionales */
+console.log('*************************************');
+let carta = [
+  ['Plato', 'Cantidad', 'Precio', 'Tamaño'],
+  ['Menu pizza', 4, [8, 10, 15], ['pequeño', 'mediano', 'grante']],
+  ['Menu burguer', 6, [10, 12, 17], ['pequeño', 'mediano', 'grante']],
+  ['Menu paella', 1, [14, 18, 25], ['pequeño', 'mediano', 'grante']],
+];
+
+for (let menu of carta) {
+  console.log('------------------');
+
+  for (let elemento of menu) {
+
+    if (Array.isArray(elemento)) {
+      for (const subele of elemento) {
+        console.log(subele);
+      }
+
+    } else {
+      console.log(elemento);
+    }
+    
+  }
+}
