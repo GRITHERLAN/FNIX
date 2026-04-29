@@ -1,0 +1,1 @@
+Hola soy un archivo de TXT<br>Soy un texto metido desde php

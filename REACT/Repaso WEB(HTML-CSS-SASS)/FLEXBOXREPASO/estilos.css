@@ -1,0 +1,60 @@
+body {
+  background: beige;
+}
+
+.flex-container {
+  /* coloca elementos uno al lado del otro aplica responsive*/
+  display: flex;
+  border: 1px solid black;
+  background: #666666;
+  padding: 20px;
+  /* establece direccion de los elementos interiores*/
+  /* flex-direction: row; */
+  width: 80%;
+  margin: 0 auto;
+  /* si se achica el ancho, se desplegara hacia abajo creando nuevaas filas */
+  /* flex-wrap: wrap; */
+  /* se mezclan las propiedades flex-wrap y flex-direction */
+  flex-flow: row wrap;
+  /* sirve para posicionar(centro-izq-der-por espacio etc...) horizontal los elementos dentro de la caja */
+  justify-content: center;
+  /* sirve para posicionar vertical los elementos dentro de la caja */
+  align-items: center;
+  /* sirve para ajustar espaciado de forma vertical */
+  align-content: center;
+  height: 500px;
+}
+
+.caja {
+  border: 1px solid #666666;
+  background-color: white;
+  color: black;
+  font-family: 'Courier New', Courier, monospace;
+  /* letra negrilla */
+  font-weight: bold;
+  width: 200px;
+  height: 200px;
+  line-height: 200px;
+  text-align: center;
+  margin: 5px;
+}
+
+.caja1 {
+  background: lightblue;
+  /* manipula orden de los elemento, debe estar configurado la caracteriztica flexbox */
+  order: 3;
+  /* manipula la prioridad con la que un elemendo se vuelve ancho o crece en su tamaño 5 mas ancho, 1 menos ancho */
+  flex-grow: 5;
+  /* actua como un width en flexbox, es mas compatible */
+  flex-basis: 50%;
+}
+.caja2 {
+  background: lightcoral;
+  order: 1;
+  flex-grow: 1;
+}
+.caja3 {
+  background: lightgreen;
+  order: 2;
+  flex-grow: 1;
+}

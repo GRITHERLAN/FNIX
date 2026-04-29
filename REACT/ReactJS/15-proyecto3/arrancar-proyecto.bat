@@ -1,0 +1,5 @@
+start cmd.exe /k "cd C:\Program Files\MongoDB\Server\8.2\bin && mongod.exe"
+start cmd.exe /k "cd C:\Users\FNC_GRITHER\Desktop\FNIX\REACT\ReactJS\APIRestNodeJS && npm run start"
+start cmd.exe /k "cd C:\Users\FNC_GRITHER\Desktop\FNIX\REACT\ReactJS\15-proyecto3 && npm run dev"
+start /k "cd C:\Users\FNC_GRITHER\AppData\Local\Postman && Postman.exe"
+start /k "cd C:\Users\FNC_GRITHER\AppData\Local\MongoDBCompass && MongoDBCompass.exe"
