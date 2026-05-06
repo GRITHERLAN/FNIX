@@ -1,0 +1,23 @@
+.cajita {
+  background: lightblue;
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 35px;
+  text-align: center;
+  font-family: Arial;
+}
+
+.articuloBase {
+  border: 1px solid black;
+  margin: 20px;
+  padding: 30px;
+}
+
+.articuloAmarillo {
+  background-color: yellow;
+}
+
+.articuloNegro {
+  background-color: black;
+  color: aliceblue;
+}
