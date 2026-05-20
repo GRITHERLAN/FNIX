@@ -1,0 +1,251 @@
+/* Estilos Generales */
+
+:root {
+  --bg-layout: white;
+  --color-primary: #1f87c4;
+  --color-text-logo: white;
+  --bg-nav: #333333;
+  --color-link: white;
+  --color-shadow: #b7b4b4;
+  --color-light: #59b0e2;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: Helvetica, Arial, sans-serif;
+  background-image: url("../img/cielo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.layout {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "slider slider"
+    "articles aside";
+  grid-template-columns: 70% 30%;
+  max-width: 160rem;
+  background-color: var(--bg-layout);
+  padding: 3rem;
+  margin: 2rem auto;
+}
+
+.layout__header {
+  grid-area: header;
+  margin-top: 2rem;
+}
+
+.header__logo {
+  display: inline-block;
+  margin-bottom: 2rem;
+  padding: 0.5rem 1.5rem;
+  background-color: var(--color-primary);
+}
+
+.logo__text {
+  color: var(--color-text-logo);
+  font-size: 5rem;
+}
+
+.header__nav {
+  width: 100%;
+  height: 5rem;
+  background-color: var(--bg-nav);
+  padding: 0 2rem;
+}
+
+.nav__list {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+}
+
+.list__link {
+  height: 100%;
+  color: var(--color-link);
+  display: flex;
+  padding: 1rem;
+  transition: all 300ms linear;
+  align-items: center;
+}
+
+.list__link:hover {
+  background-color: var(--color-primary);
+}
+
+.layout__slider {
+  grid-area: slider;
+  position: relative;
+  width: 100%;
+  height: 40rem;
+  overflow: hidden;
+  border: 5px solid var(--color-text-logo);
+  box-shadow: 0px 0px 5px var(--color-shadow);
+  margin-bottom: 4rem;
+}
+
+.slider__btn-next,
+.slider__btn-prev {
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  left: 1rem;
+  top: calc(50% - 2.5rem);
+  z-index: 2;
+  border-radius: 100%;
+  border: none;
+  cursor: pointer;
+  background-color: var(--bg-nav);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-link);
+  font-size: 4rem;
+}
+
+.slider__btn-next {
+  left: auto;
+  right: 1rem;
+}
+
+.slides__item {
+  position: absolute;
+  transition: opacity 600ms linear;
+  opacity: 0;
+}
+
+.slides__item--active {
+  opacity: 1;
+}
+
+.layout__articles {
+  grid-area: articles;
+  margin-right: 7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.articles__articles {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.article__title {
+  font-size: 3rem;
+}
+
+.article__date {
+  color: var(--color-shadow);
+}
+
+.article__body {
+  text-align: justify;
+}
+
+.article__btl {
+  width: 12rem;
+  padding: 1.5rem 1rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  background-color: var(--color-primary);
+  border: none;
+  color: var(--color-link);
+  transition: all 300ms linear;
+}
+
+.article__btl:hover {
+  background-color: var(--color-light);
+}
+
+.layout__aside {
+  grid-area: aside;
+}
+
+.aside__header {
+  margin-bottom: 4rem;
+}
+
+.header__container-title {
+  margin-bottom: 2rem;
+}
+
+.header__title,
+.login__title {
+  text-align: center;
+  line-height: 1rem;
+  background: url("../img/lines.png") repeat-x;
+}
+
+.title__span,
+.login__span {
+  background-color: var(--bg-layout);
+  padding: 0.5rem;
+}
+
+.header__description {
+  font-size: 1.6rem;
+  padding: 0.5rem;
+}
+
+.aside__login {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.login__container-title {
+  margin-bottom: 1.5rem;
+}
+
+.login__form-group {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.login_input {
+  width: 100%;
+  border: 2px solid var(--color-shadow);
+  outline: none;
+  transition: all 300ms linear;
+}
+
+.login_input:focus {
+  border-color: var(--color-primary);
+}
+
+.login__submit {
+  padding: 1rem;
+  cursor: pointer;
+  border: 1px solid var(--color-shadow);
+  transition: all 300ms linear;
+}
+
+.login__submit:hover {
+  border-color: var(--color-primary);
+}
+
+.footer {
+  max-width: 160rem;
+  margin: 0 auto;
+  margin-top: 5rem;
+  margin-bottom: 0.5rem;
+  padding: 1.5rem;
+  background-color: var(--bg-nav);
+  color: var(--bg-layout);
+  opacity: 0.8;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer__top {
+  cursor: pointer;
+}
