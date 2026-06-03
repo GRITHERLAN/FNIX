@@ -6,6 +6,7 @@ function DecoradorTurbo(target: Function) {
 }
 
 function DecoradorConMsj(msj: string) {
+  /* debo crear una function para poder pasarle el parametro target */
   return function (target: any) {
     console.log(`mi ${target.name} te manda este MSJ: ${msj}`);
   };
@@ -24,7 +25,7 @@ function AgregarMetodo(target: any) {
 } */
 
 // @DecoradorTurbo le pasa como parametro automatico la clase de abajo
-// @DecoradorConMsj("El Mejor Curso de maquetacion WEB") se se le pasa el primer parametro y automaticamente la clase
+// @DecoradorConMsj("El Mejor Curso de maquetacion WEB") se le pasa el primer parametro y automaticamente la clase
 @AgregarMetodo
 class Coche {
   constructor() {
