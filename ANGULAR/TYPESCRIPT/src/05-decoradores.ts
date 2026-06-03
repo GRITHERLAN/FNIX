@@ -6,7 +6,7 @@ function DecoradorTurbo(target: Function) {
 }
 
 function DecoradorConMsj(msj: string) {
-  /* debo crear una function para poder pasarle el parametro target */
+  /* debo crear una  function para poder pasarle el parametro target */
   return function (target: any) {
     console.log(`mi ${target.name} te manda este MSJ: ${msj}`);
   };
