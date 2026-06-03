@@ -13,7 +13,7 @@ function DecoradorConMsj(msj: string) {
 }
 
 function AgregarMetodo(target: any) {
-  /* se crea metodo en el decorador de esta manera */
+  /* se crea metodo  en el decorador de esta manera */
   target.prototype.acelerar = function () {
     console.log("Acelerando desde un metodo extra en un decorador " + target.name);
   };
