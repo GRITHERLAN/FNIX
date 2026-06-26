@@ -1,0 +1,31 @@
+<h1>Carrito de Compras Todo lo que hemos aprendido</h1>
+
+<div>
+    <p>Productos en el Carrito : {{canticadProductos}}</p>
+    <p>Total del carrito: {{totalCarrito}}</p>
+    <label for="">Cambiar nombre tienda: </label>
+    <input type="text" [(ngModel)]="NombreTienda">
+    <h3>{{NombreTienda}}</h3>
+
+    <button (click)="addProducto()">Añadir Producto</button>
+    <br>
+    <button (click)="borrarProduct()">Eliminar 1 producto del Carrito</button>
+    <br>
+    <button (click)="addfiveProduct()">Añadir 5 Productos</button>
+    <br>
+    <button (click)="borrarProductAll()">Vaciar Carrito</button>
+    <br>
+    <button (click)="descuento()">Aplicar Cupon del 20%</button>
+</div>
+
+@if (notificacion) {
+<div class="notificacion">
+    <strong>{{notificacion}}</strong>
+</div>
+}
+
+@if (notificaciondes) {
+<div class="notificacion">
+    <strong>{{notificaciondes}}</strong>
+</div>
+}

@@ -1,0 +1,69 @@
+<h1>Plantillas en Angular</h1>
+
+<p>usuario works!</p>
+
+<a [href]="web" [class.existe]="web" target="_blank">{{web}}</a>
+
+<h2>Estructuras de control de flujo en angular(Tempaltes)</h2>
+
+@if (redirigir) {
+<p>El enlace a {{web}} es correcto</p>
+}@else {
+<p>el enlace no existe o es incorrecto</p>
+}
+
+<button (click)="cambioDir()">Clickeame</button>
+
+<h3>Marcas de padel</h3>
+<button (click)="cambiarestado()">Cambiar Estado</button>
+<ul>
+    @for (marca of marcasPdel; track marca.id;
+    let indice = $index , contador = $count, par = $even , impar = $odd) {
+    <li>{{marca.nombre}} {{par}}</li>
+    } @empty {
+    <li>el listado esta vacio</li>
+    }
+</ul>
+
+@switch (usuario.rol) {
+
+@case("admin"){
+<app-ventas></app-ventas>
+}
+
+@case("user"){
+<p>eres un usuario normal</p>
+}
+
+@default {
+<h1>eres un usuario invitado</h1>
+}
+
+}
+
+<h3>mas cosas de las plantillas</h3>
+
+<ng-container>
+    <h1>Esto esta en un contenedor de angular</h1>
+</ng-container>
+
+@let pais = "España " + (7 + 7);
+
+@let saludo = "Hola desde " + pais;
+
+{{saludo}}
+
+<!-- carga diferida, carga despues de que se cargen los demas componentes -->
+<!-- @defer{
+<mi-producto></mi-producto>
+}@placeholder {
+<h1>Se esta cargando el componente de producto</h1>
+} -->
+
+<h2>Tuberias Angular</h2>
+
+{{web | titlecase }}
+<br>
+{{fecha | date: "dd/mm/yyyy"}}
+
+{{"El cielo esta enladrillado quien lo desenladrillara "| cambialetras : true}}

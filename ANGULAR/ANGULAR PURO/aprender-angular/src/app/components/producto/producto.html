@@ -1,0 +1,20 @@
+<h1>COMPONENTES EN ANGULAR</h1>
+
+<h1>{{ nombre }}</h1>
+<p>Mi producto es un ordenador</p>
+<p>De marca ASUS {{ marca }}</p>
+<strong>{{ precio }} $</strong>
+
+<br />
+
+<button (click)="cambiarNombre()">Cambiar nombre</button>
+
+<br />
+
+@if (mostrar_Pelis == true) {
+<app-pelicula></app-pelicula>
+<app-pelicula></app-pelicula>
+<app-pelicula></app-pelicula>
+}
+
+<button (click)="pelis(mostrar_Pelis)">ocultar/mostrar pelis</button>
