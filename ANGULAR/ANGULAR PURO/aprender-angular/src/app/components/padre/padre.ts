@@ -1,11 +1,19 @@
 import { Component } from '@angular/core';
+import { Hijo } from '../hijo/hijo';
 
 @Component({
   selector: 'app-padre',
-  imports: [],
+  imports: [Hijo],
   templateUrl: './padre.html',
   styleUrl: './padre.css',
 })
 export class Padre {
+  nombreDelPadre: string = "Nicolas Valencia"
+
+  elSaludoRecibido: string = ""
+
+  recibirSaludo(saludo: string) {
+    this.elSaludoRecibido = saludo
+  }
 
 }

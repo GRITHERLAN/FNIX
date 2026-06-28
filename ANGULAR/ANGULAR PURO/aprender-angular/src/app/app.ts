@@ -9,12 +9,14 @@ import { config } from './models/config';
 import { Cine } from './components/cine/cine';
 import { Carrito } from './components/carrito/carrito';
 import { CarritoSignals } from './components/carrito-signals/carrito-signals';
+import { Padre } from './components/padre/padre';
+import { UsuariosHTTP } from './components/usuarios-http/usuarios-http';
 
 @Component({
   /* etiqueta en index */
   selector: 'app-root',
   /* lo usamos */
-  imports: [CarritoSignals],
+  imports: [UsuariosHTTP],
   /* usamos el archivo html exacto */
   templateUrl: './app.html',
   /* hoda de estilos personalizada */

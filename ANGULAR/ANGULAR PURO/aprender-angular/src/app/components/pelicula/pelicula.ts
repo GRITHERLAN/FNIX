@@ -7,6 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './pelicula.css',
 })
 export class Pelicula {
+
+  public hola: string = "hola"
+
   ngOnInit() {
     console.log('el componente de peliculas esta arrancado');
   }

@@ -8,7 +8,7 @@ import { Signal, computed, effect } from '@angular/core';
   styleUrl: './carrito-signals.css',
 })
 export class CarritoSignals {
-
+  /* se crean las signals */
   public NombreTienda = signal("Mi Tienda")
   public canticadProductos = signal(+0)
   public totalCarrito = signal(0)
@@ -80,6 +80,7 @@ export class CarritoSignals {
 
   /*   contador = signal<number>(0)
     incremento = signal<number>(1)
+    devuelve una variacion de la signal que se este cambiando
     contadorX3 = computed(() => this.contador() * 3)
     msj: string = ""
   

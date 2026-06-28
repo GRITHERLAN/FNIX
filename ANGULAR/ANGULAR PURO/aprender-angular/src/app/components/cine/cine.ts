@@ -2,10 +2,13 @@ import { Component } from '@angular/core';
 import { PeliculaCine } from '../../models/pelicula';
 import { FormsModule } from '@angular/forms';
 import { NgStyle } from '@angular/common';
+import { PeliculaService } from '../../services/pelicula.service';
 
 @Component({
   selector: 'app-cine',
   imports: [FormsModule, NgStyle],
+  /* se especifica en que componente se cargara el provider */
+  providers: [PeliculaService],
   templateUrl: './cine.html',
   styleUrl: './cine.css',
 })
@@ -17,16 +20,23 @@ export class Cine {
   public pelis_sin_datos: string[] = []
   public color: string = "#fff"
 
-  constructor() {
+  constructor(private peliculaService: PeliculaService) {
+
     this.titulo = "Modelos"
-    this.peliculas = [
-      new PeliculaCine(1, "El padrino", "Mafie", "Copola", 1976, "Prime Video", false),
-      new PeliculaCine(2, "El padrino 2", "Mafie", "Copola", 1976, "Prime Video", false)
-    ]
+    /* traemos la info desde servicio pelis y lo añadios a la variable tal cual */
+    this.peliculas = peliculaService.getPelis()
+
   }
 
+  ngOnInit() {
+    /* se usa el service importado */
+    this.peliculaService.saludoServicio()
+  }
+
+  /* detecta cambios en el componente de forma general */
   ngDoCheck() {
     console.log(this.mi_pelicula);
+
   }
 
   showPelicula() {

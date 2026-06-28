@@ -1,1 +1,21 @@
-<p>padre works!</p>
+<hr>
+
+<h1>Soy el Componente Padre</h1>
+<p>Soy un componente que contiene otro Componente y ese es mi HIJO</p>
+
+<p>Te presento a mi Hijo</p>
+
+{{elSaludoRecibido}}
+<!-- PADRE A HIJO (INPUT), HIJO A PADRE(OUTPUT Y EVENEMITTER) -->
+<app-hijo 
+[elNombreDeMiPapa]="nombreDelPadre" 
+(saludoDelHijo)="recibirSaludo($event)"
+></app-hijo>
+
+
+<!-- 
+atributos en angular HTML
+
+<section id="" class="" [conBinding]="" (Evento)="" [(Combinado)]="" *ngIf="" *ngFor="">
+    Contenido
+</section> -->
