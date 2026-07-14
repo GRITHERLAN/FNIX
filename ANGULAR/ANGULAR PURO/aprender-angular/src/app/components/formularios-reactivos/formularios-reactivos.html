@@ -1,0 +1,83 @@
+<h2>Formularios Reactivos en Angular</h2>
+
+<form action="" [formGroup]="formulario" (ngSubmit)="onSubmit()">
+
+    <div class="field">
+        <label for="nombre">Nombre</label><br>
+        <!-- se usa el formcontrolname para especificar la propiedad a la que hara validacion -->
+        <input type="text" formControlName="nombre" id="nombre">
+
+        @if (formulario.get('nombre')?.invalid && formulario.get('nombre')?.touched) {
+        <div>
+            @if (formulario.get('nombre')?.errors?.['required']) {
+            <span>El nombre es requerido</span>
+            }
+            @if (formulario.get('nombre')?.errors?.['minlength']) {
+            <span>El nombre es muy corto</span>
+            }
+            @if (formulario.get('nombre')?.errors?.['maxlength']) {
+            <span>El nombre es muy largo</span>
+            }
+        </div>
+        }
+    </div>
+
+    <div class="field">
+        <label for="email">Email</label><br>
+        <!-- se usa el formcontrolname para especificar la propiedad a la que hara validacion -->
+        <input type="email" formControlName="email" id="email">
+
+        @if (formulario.get('email')?.invalid && formulario.get('email')?.touched) {
+        <div>
+            @if (formulario.get('email')?.errors?.['required']) {
+            <span>El email es requerido</span>
+            }
+            @if (formulario.get('email')?.errors?.['email']) {
+            <span>El email no es valido</span>
+            }
+
+        </div>
+        }
+    </div>
+
+
+    <div class="field">
+        <label for="edad">Edad</label><br>
+        <!-- se usa el formcontrolname para especificar la propiedad a la que hara validacion -->
+        <input type="number" formControlName="edad" id="edad">
+
+        @if (formulario.get('edad')?.invalid && formulario.get('edad')?.touched) {
+        <div>
+            @if (formulario.get('edad')?.errors?.['required']) {
+            <span>El edad es requerida</span>
+            }
+            @if (formulario.get('edad')?.errors?.['min']) {
+            <span>la edad no es valida</span>
+            }
+            @if (formulario.get('edad')?.errors?.['max']) {
+            <span>El edad no es valida</span>
+            }
+        </div>
+        }
+    </div>
+
+    <div class="field">
+        <label for="password">Password</label><br>
+        <!-- se usa el formcontrolname para especificar la propiedad a la que hara validacion -->
+        <input type="password" formControlName="password" id="password">
+
+        @if (formulario.get('password')?.invalid && formulario.get('password')?.touched) {
+        <div>
+            @if (formulario.get('password')?.errors?.['required']) {
+            <span>El password es requerida</span>
+            }
+            @if (formulario.get('password')?.errors?.['minlength']) {
+            <span>la password es muy corta</span>
+            }
+
+        </div>
+        }
+    </div>
+    <br>
+    <button type="submit" [disabled]="formulario.invalid">Enviar</button>
+</form>

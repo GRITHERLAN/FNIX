@@ -2,4 +2,34 @@
 <p>{{descripcion}}</p>
 
 <!-- se importa en el app.ts -->
-<app-usuarios-http></app-usuarios-http>
+
+<!-- <app-carrito></app-carrito> -->
+<!-- <app-carrito-signals></app-carrito-signals> -->
+<!-- <app-cine></app-cine> -->
+<!-- <app-padre></app-padre> -->
+<!-- <mi-producto></mi-producto> -->
+<!-- <app-usuario></app-usuario> -->
+<!-- <app-ventas></app-ventas> -->
+
+<!-- <app-usuarios-http></app-usuarios-http> -->
+
+<hr>
+<!-- se deben configurar rutas en el app.routes.ts -->
+
+<!-- se usa router linki para que se renderice la carga y la vista y no recargue toda la pagina -->
+<a routerLink="/inicio" routerLinkActive="activar">Inicio</a> &nbsp;
+<a routerLink="/componentes" routerLinkActive="activar">Componentes</a> &nbsp;
+<a routerLink="/pipes" routerLinkActive="activar">Pipes</a> &nbsp;
+<a routerLink="/ciclo-componentes" routerLinkActive="activar">Ciclos-componentes</a> &nbsp;
+<a routerLink="/plantillas" routerLinkActive="activar">Plantillas</a> &nbsp;
+<a routerLink="/directivas" routerLinkActive="activar">Directivas</a> &nbsp;
+<a routerLink="/mdelos-y-clases" routerLinkActive="activar">Modelos y Clases</a> &nbsp;
+<a routerLink="/carrito" routerLinkActive="activar">Carrito</a> &nbsp;
+<a routerLink="/carrito-con-signals" routerLinkActive="activar">Carrito con signals</a> &nbsp;
+<a routerLink="/padre-hijo-comunicaciones" routerLinkActive="activar">Comunicacion Padre e Hijo</a> &nbsp;
+<a routerLink="/servicios" routerLinkActive="activar">Servicios</a> &nbsp;
+<a routerLink="/formularios" routerLinkActive="activar">Formularios</a> &nbsp;
+<a routerLink="/formularios-reactivos" routerLinkActive="activar">Formularios reactivos</a> &nbsp;
+<hr>
+
+<router-outlet></router-outlet>

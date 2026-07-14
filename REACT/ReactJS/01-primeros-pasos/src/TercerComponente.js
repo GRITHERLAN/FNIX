@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 se desestructura estos objetos pasados en el componente App.js
 realizando el siguiente parametro "({})" esto hara que los objetos pasen a ser variables directas */
 export const TercerComponente = ({ nombre = 12323, apellido = 'Valencia', ficha }) => {
-  console.log();
 
   return (
     <div>

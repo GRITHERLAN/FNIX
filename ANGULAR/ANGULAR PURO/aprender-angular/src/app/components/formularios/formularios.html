@@ -1,0 +1,75 @@
+<h2>Formularios en Angular</h2>
+
+<p>Como trabajar con formualrios sencillos en angular</p>
+
+<!-- valida formulario en tiempo real, creamos la variable #form="ngForm"  -->
+<form (submit)="onSubmit()" #form="ngForm" action="">
+    <p>
+        <label for="nombre">Nombre </label><br>
+        <input type="text" name="nombre" id="nombre" [(ngModel)]="nombre" required minlength="3" maxlength="40"
+            #nombreField="ngModel">
+    </p>
+    <!-- validacion por condicion en campo, por etiqueta -->
+    @if (nombreField.invalid && nombreField.touched ) {
+    <div class="invalido">
+        El nombre es incorrecto, hazlo bien
+        @if(nombreField.errors?.['required']){
+        <span>Rellena el campo</span>
+        }
+        @if(nombreField.errors?.['minlength']){
+        <span>Tu nombre es muy corto</span>
+        }
+        @if(nombreField.errors?.['maxlength']){
+        <span>Tu nombre es muy largo</span>
+        }
+    </div>
+    }
+
+    <p>
+        <label for="email">Email </label><br>
+        <input type="email" name="email" id="email" [(ngModel)]="email" required email #emailField="ngModel">
+    </p>
+    @if (emailField.invalid && emailField.touched ) {
+    <div class="invalido">
+        El email es incorrecto, hazlo bien
+    </div>
+    }
+
+    <p>
+        <label for="edad">Edad </label><br>
+        <input type="number" name="edad" id="edad" [(ngModel)]="edad" required min="18" max="100" #edadField="ngModel">
+    </p>
+    @if (edadField.invalid && edadField.touched ) {
+    <div class="invalido">
+        Tu edad es incorrecta, hazlo bien
+    </div>
+    }
+
+    <p>
+        <label for="passwrod">password </label><br>
+        <input type="password" name="password" id="passwrod" [(ngModel)]="password" required minlength="7"
+            #passField="ngModel">
+    </p>
+    @if (passField.invalid && passField.touched ) {
+    <div class="invalido">
+        la password es incorrecta, hazlo bien
+        @if(passField.errors?.['required']){
+        <span>Rellena el campo</span>
+        }
+        @if(passField.errors?.['minlength']){
+        <span>Tu password es muy corto</span>
+        }
+    </div>
+    }
+    <!-- si los campos no estan validos, desactiva el boton -->
+    <button type="submit" [disabled]="form.invalid">Enviar</button>
+
+</form>
+
+<hr>
+
+<p>Nombre: {{nombre}}</p>
+
+<p>Email: {{email}}</p>
+
+<p>Edad: {{edad}}</p>

@@ -26,3 +26,8 @@
     width: 30%;
     text-align: center;
 }
+
+.activar {
+    background-color: yellow;
+    color: black;
+}

@@ -1,0 +1,52 @@
+<div class="contenedor">
+    <div class="menu">
+        @for (item of items(); track item._id) {
+        <ul [className]="item.state">
+            <div class="items">
+                <li>
+                    {{item.name}} | | {{item.description}}
+                </li>
+                <br>
+                @if (item.state !== 'Cerrado') {
+                <button class="cambiar" hidden (click)="modificarState(item._id, {state: 'Cerrado'})">CHECK</button>
+                }
+                <button class="eliminar" (click)="eliminar(item._id)">ELIMINAR</button>
+                @if (item.state !== 'Cerrado') {
+                <button class="editar" (click)="editAct(item._id)">EDITAR</button>
+                }
+            </div>
+        </ul>
+        }
+
+    </div>
+    <div class="formularios">
+        @if (habilitarEdit == 0) {
+        <form (ngSubmit)="enviar()" class="formularios">
+            <input [(ngModel)]="name" name="nombre" placeholder="Nombre">
+
+            <br>
+
+            <input [(ngModel)]="description" name="description" placeholder="Description">
+
+            <br>
+
+            <button class="guardar" type="submit">Guardar</button>
+        </form>
+        }
+        @if (habilitarEdit == 1)
+        {
+
+        <form (ngSubmit)="modificar(idEdit)" class="formularios">
+            <input [(ngModel)]="name" name="nombre" [placeholder]="name()">
+
+            <br>
+
+            <input [(ngModel)]="description" name="description" [placeholder]="description()">
+
+            <br>
+
+            <button class="guardar" type="submit">Guardar</button>
+        </form>
+        }
+    </div>
+</div>

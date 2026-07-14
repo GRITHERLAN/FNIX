@@ -1,5 +1,5 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, RouterLinkWithHref, RouterLinkActive } from '@angular/router';
 /* importamos el componente */
 /* import { Producto } from './producto/Producto'; */
 import { Usuario } from './components/usuario/usuario';
@@ -11,12 +11,14 @@ import { Carrito } from './components/carrito/carrito';
 import { CarritoSignals } from './components/carrito-signals/carrito-signals';
 import { Padre } from './components/padre/padre';
 import { UsuariosHTTP } from './components/usuarios-http/usuarios-http';
+import { Hijo } from "./components/hijo/hijo";
+import { Producto } from "./components/producto/Producto";
 
 @Component({
   /* etiqueta en index */
   selector: 'app-root',
   /* lo usamos */
-  imports: [UsuariosHTTP],
+  imports: [RouterOutlet, RouterLinkWithHref, RouterLinkActive],
   /* usamos el archivo html exacto */
   templateUrl: './app.html',
   /* hoda de estilos personalizada */

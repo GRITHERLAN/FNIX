@@ -1,0 +1,133 @@
+body {
+    background: radial-gradient(circle, blue, purple);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+
+}
+
+.items {
+    display: flex;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    /* horizontal */
+    align-items: center;
+    /* vertical */
+    height: 90vh;
+}
+
+.menu {
+    width: 60%;
+    max-height: 60vh;
+    /* limita al alto de la pantalla */
+    overflow: auto;
+    /* activa scroll vertical */
+}
+
+.formularios {
+    width: 50%;
+
+}
+
+form {
+    background-color: rgb(240, 248, 255, 0.4);
+    margin: 0 auto;
+    width: 60%;
+    /* 👈 clave */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+input {
+    display: block;
+    margin: 10px auto;
+    /* centra los inputs */
+    padding: 10px;
+    width: 70%;
+    border-radius: 10px;
+    border: none;
+}
+
+.guardar {
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(231, 155, 13);
+    transition: 300ms;
+}
+
+.guardar:hover {
+    background-color: rgb(231, 155, 13, 0.5);
+}
+
+
+ul {
+    background-color: rgb(240, 248, 255, 0.4);
+    width: 50%;
+    margin: 2% auto;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+li {
+    width: 40%;
+    color: aliceblue;
+    list-style: none;
+    margin: 2% auto;
+}
+
+.eliminar,
+.editar,
+.cambiar {
+    padding: 20px;
+    height: 15px;
+    line-height: 5px;
+    margin: auto;
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 10px;
+    color: white;
+    border: none;
+}
+
+.cambiar {
+    background-color: rgb(226, 114, 9);
+    transition: 300ms;
+}
+
+.cambiar:hover {
+    background-color: rgb(226, 114, 9, 0.5);
+    transition: 300ms;
+}
+
+.eliminar {
+    background-color: rgb(221, 5, 5);
+    transition: 300ms;
+}
+
+.eliminar:hover {
+    background-color: rgb(221, 5, 5, 0.5);
+}
+
+.editar {
+    background-color: rgb(126, 199, 17);
+    transition: 300ms;
+}
+
+.editar:hover {
+    background-color: rgb(126, 199, 17, 0.5);
+}
+
+.Cerrado {
+    background-color: rgba(127, 253, 0, 0.5);
+}
+
+.Abierto {
+    background-color: rgba(219, 17, 17, 0.5);
+}

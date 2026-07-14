@@ -100,17 +100,20 @@ export const AjaxComponent = () => {
     return (
       <div>
         <h2>Listado de Usuarios Via Ajax</h2>
-        <ol className="usuarios">
-          {/* se llenan datos de el metodo getUsuariosEstaticos() o getUsuariosAjaxPromesa() */}
-          {usuarios.map((usuario) => {
-            return (
-              <li key={usuario.id}>
-                <img src={usuario.avatar} width="40"></img>
-                {usuario.first_name} {usuario.last_name}
-              </li>
-            );
-          })}
-        </ol>
+        {usuarios == "" ? (
+          <ol className="usuarios">
+            {/* se llenan datos de el metodo getUsuariosEstaticos() o getUsuariosAjaxPromesa() */}
+            {usuarios.map((usuario) => {
+              return (
+                <li key={usuario.id}>
+                  <img src={usuario.avatar} width="40"></img>
+                  {usuario.first_name} {usuario.last_name}
+                </li>
+              );
+            })}
+
+          </ol>
+        ) : ("No se trajo nada de la API")}
       </div>
     );
   }
