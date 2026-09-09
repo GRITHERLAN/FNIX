@@ -1,0 +1,76 @@
+/*
+BEM = BLOQUE - ELEMENTO - MODIFICADOR 
+
+se usa siempre CLASS no ID
+
+Class = aplicar estilos
+
+Id = aplicar funcionalidad (JS)
+
+.bloque
+.bloque__elemento
+.bloque__elemento--modificador
+
+1.No usar ID
+2.No usar Etiquetas
+3.Que todo sea un key selecto( seleccionar justo elemento al cual se le daran estilos)
+*/
+.cards {
+    width: 400px;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px gray;
+}
+
+/* BEM */
+.cards__card {
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px;
+    margin: 5px;
+    background-color: lightblue;
+
+}
+
+/* clave key selector */
+.card__title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.card__link {
+    background-color: green;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.card__link--rojo {
+    background-color: red;
+}
+
+
+
+/* Clasica */
+.cards .card {
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px;
+    margin: 5px;
+    background-color: lightblue;
+
+}
+
+
+/* contexto clave */
+.cards .card h3 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.cards .card a {
+    background-color: green;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
