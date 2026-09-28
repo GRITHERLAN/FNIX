@@ -3,15 +3,17 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <!-- Estilos -->
     <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.1.2-web/css/all.min.css">
     <link rel="stylesheet" href="assets/fonts/poppins/poppins.css">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/css/scroll.css">
     <link rel="stylesheet" href="assets/css/icons.css">
     <title>Portafolio - Nicolas Valencia</title>
+    <script src="assets/js/menu.js" defer></script>
 </head>
 
 <body>
@@ -64,13 +66,6 @@
                         </li>
 
                         <li class="menu__option">
-                            <a class="menu__link" href="portafolio.html">
-                                <i class="fa-solid fa-briefcase menu__icon"></i>
-                                <span class="menu__overlay">Portafolio</span>
-                            </a>
-                        </li>
-
-                        <li class="menu__option">
                             <a class="menu__link" href="contacto.html">
                                 <i class="fa-solid fa-envelope menu__icon"></i>
                                 <span class="menu__overlay">Contacto</span>
@@ -92,13 +87,13 @@
                         </li>
 
                         <li class="social__option">
-                            <a href="#" class="social__link">
+                            <a href="https://www.linkedin.com/in/nicolas-valencia-06bb91128/" class="social__link">
                                 <i class="fa-brands fa-linkedin social__icon"></i>
                             </a>
                         </li>
 
                         <li class="social__option">
-                            <a href="#" class="social__link">
+                            <a href="https://www.instagram.com/fnc_grither/" class="social__link">
                                 <i class="fa-brands fa-instagram social__icon"></i>
                             </a>
                         </li>
@@ -108,7 +103,7 @@
                 </div>
                 <!-- boton de curriculum -->
                 <div class="user-info__buttons">
-                    <a href="#" class="user-info__btn">Descargar CV</a>
+                    <a href="assets/hv/Nicolas Valencia Blandon-CV.pdf" download="" class="user-info__btn">Descargar CV</a>
                 </div>
                 <!-- pie de pagina -->
                 <footer class="user-info__footer">
@@ -118,6 +113,12 @@
             </section>
 
         </aside>
+
+        <!-- menu hamburguesa -->
+        <div class="layout__menu-toggle">
+            <i class="fa-solid fa-bars menu-toggle__icon"></i>
+            <i class="fa-solid fa-xmark menu-toggle__icon"></i>
+        </div>
 
         <!-- contenido principal -->
         <main class="layout__content">
